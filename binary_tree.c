@@ -1,8 +1,4 @@
 #include"binary_tree.h"
-void TravelAll(Data_type *val)
-{
-    printf("%.f  ",*val);
-}
 binary_tree create_btree()
 {
     binary_tree tree={NULL,0,0};
@@ -344,32 +340,6 @@ static void btree_delete(binary_tree *btp,const Data_type *vp){
     }
 }
 
-static void test()
-{
-    binary_tree tree = create_btree(); 
-    double b = 1.0;
-    for(int i=1;i<6;++i)
-    {      
-        b = i*1.0;
-        btree_insert(&tree,&b);
-        // printf("root val is %.f\n",tree.root->val);
-    }
-    printf("max val = %.f\n",btree_find_max(&tree));
-    // printf("19999 is %d\n",btree_find(&tree,&b));
-    printf("min val = %.f\n",btree_find_min(&tree));
-    printf("max high of the tree:%d\n",get_high(&tree));
-    // b = 2;
-    // btree_delete(&tree,&b);
-    printf("size is %d\n",tree.size);
-    btree_Travel_preorder(&tree,TravelAll);
-    btree_Travel_midorder(&tree,TravelAll);
-    // btree_Travel_lasorder(&tree);
-    // printf("min high of the tree:%d\n",get_high(&tree,false));
-    btree_clean(&tree);
-
-}
-
-// int main()
 // {   clock_t tStart = clock();
 //     test();
 //     printf("Time taken: %.5fs\n", (double)(clock() - tStart)/CLOCKS_PER_SEC);
