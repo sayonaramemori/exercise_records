@@ -12,7 +12,8 @@ typedef double Data_type;
 typedef struct node
 {
     Data_type val;
-    node *lchld;node *rchld;
+    struct node *lchld;
+    struct node *rchld;
 }*Node;
 
 typedef struct binary_tree

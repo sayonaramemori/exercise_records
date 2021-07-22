@@ -340,8 +340,3 @@ static void btree_delete(binary_tree *btp,const Data_type *vp){
     }
 }
 
-// {   clock_t tStart = clock();
-//     test();
-//     printf("Time taken: %.5fs\n", (double)(clock() - tStart)/CLOCKS_PER_SEC);
-//     return 0;
-// }
