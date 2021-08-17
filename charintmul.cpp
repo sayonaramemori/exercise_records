@@ -8,6 +8,7 @@ using namespace std;
 class Solution {
 public:
     string multiply(string num1, string num2) {
+		if(num1[0]=='0'||num2[0]=='0')return string(1,'0');
 		init(num1,num2);
         dowk(num1,num2);
 		if(res.back()==0)res.pop_back();
